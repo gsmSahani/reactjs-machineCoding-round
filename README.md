@@ -6,3 +6,14 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+# My React Project
+
+This project contains several small React applications, each demonstrating different functionalities and concepts in React. Below is a list of the applications included in this project:
+
+## Table of Contents
+
+1. [Random Quote Generator](#random-quote-generator)
+2. [Counter App](#counter-app)
+3. [Realtime Input Display](#realtime-input-display)
+4. [Toggling Component](#toggling-component)
