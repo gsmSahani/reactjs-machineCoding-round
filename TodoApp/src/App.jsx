@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { IoMdAddCircle } from "react-icons/io";
-// import { TiDelete } from "react-icons/ti";
-// import { l } from "vite/dist/node/types.d-aGj9QkWt";
+
 import TodoList from "./Component/TodoApp/TodoList";
 
 const App = () => {
