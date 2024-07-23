@@ -83,5 +83,3 @@ Welcome to the machine coding round! Below are the tasks you are required to com
 - **Time Management**: Allocate time based on task complexity; prioritize completion and functionality over perfection.
 
 ---
-
-Feel free to adjust the README according to specific requirements or additional details you want to provide to candidates. This structured approach should help candidates understand the expectations and requirements clearly for each task.
