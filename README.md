@@ -11,3 +11,9 @@ Currently, two official plugins are available:
 
 This project contains several small React applications, each demonstrating different functionalities and concepts in React. Below is a list of the applications included in this project:
 
+## Table of Contents
+
+1. [Random Quote Generator](#random-quote-generator)
+2. [Counter App](#counter-app)
+3. [Realtime Input Display](#realtime-input-display)
+4. [Toggling Component](#toggling-component)
