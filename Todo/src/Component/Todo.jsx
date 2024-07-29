@@ -1,61 +1,41 @@
-// src/components/Todo.jsx
-import React, { useState } from "react";
+import React from "react";
 
-const Todo = ({ todo, onDelete, onComplete }) => {
-  const [editing, setEditing] = useState(false);
-  const [updatedTitle, setUpdatedTitle] = useState(todo.title);
-
-  const handleUpdate = () => {
-    // Implement update logic here
-    alert(`Update todo with ID ${todo.id} to ${updatedTitle}`);
-    setEditing(false);
-  };
-
+const Todo = ({ todo, toggleComplete, deleteTodo, setEditTodo }) => {
   return (
-    <div className="flex items-center justify-between p-2 border-b">
-      {!editing ? (
-        <div className="flex items-center space-x-2">
-          <span className={todo.completed ? "line-through" : ""}>
-            {todo.title}
-          </span>
+    <>
+      <li
+        className={`flex  justify-between ${
+          todo.completed ? "line-through italic font-bold text-purple-700" : ""
+        }`}
+      >
+        <input
+          type="checkbox"
+          checked={todo.completed}
+          onChange={() => {
+            toggleComplete(todo.id);
+          }}
+          className="form-checkbox"
+        />
+        <div>
+          <span className="flex text-white "> {todo.text}</span>
+        </div>
+        {/* button */}
+        <div className="flex justify-between gap-3 mr-3">
           <button
-            className="text-blue-500 hover:text-blue-700"
-            onClick={() => setEditing(true)}
+            onClick={() => setEditTodo(todo)}
+            className="text-blue-500 hover:underline "
           >
             Edit
           </button>
-        </div>
-      ) : (
-        <div className="flex items-center space-x-2">
-          <input
-            type="text"
-            value={updatedTitle}
-            onChange={(e) => setUpdatedTitle(e.target.value)}
-            className="rounded px-2 py-1 border"
-          />
           <button
-            className="bg-blue-500 text-white px-2 py-1 rounded"
-            onClick={handleUpdate}
+            onClick={() => deleteTodo(todo.id)}
+            className="text-red-500 hover:underline"
           >
-            Save
+            Delete
           </button>
         </div>
-      )}
-      <div className="flex items-center space-x-2">
-        <button
-          className="text-green-500 hover:text-green-700"
-          onClick={() => onComplete(todo.id)}
-        >
-          {todo.completed ? "Undo" : "Complete"}
-        </button>
-        <button
-          className="text-red-500 hover:text-red-700"
-          onClick={() => onDelete(todo.id)}
-        >
-          Delete
-        </button>
-      </div>
-    </div>
+      </li>
+    </>
   );
 };
 

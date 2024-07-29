@@ -2,49 +2,69 @@
 import React, { useState } from "react";
 import Todo from "./Component/Todo";
 import TodoForm from "./Component/TodoForm";
-
-const App = () => {
+function App() {
   const [todos, setTodos] = useState([]);
+  const [editTodo, setEditTodo] = useState(null);
 
-  const addTodo = (title) => {
-    const newTodo = {
-      id: todos.length + 1,
-      title: title,
-      completed: false,
-    };
-    setTodos([...todos, newTodo]);
+  const addTodo = (text) => {
+    setTodos([
+      ...todos,
+      {
+        id: Date.now(),
+        text,
+        completed: false,
+      },
+    ]);
+  };
+
+  const updateTodo = (id, updatedText) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, text: updatedText } : todo
+      )
+    );
+    setEditTodo(null);
   };
 
   const deleteTodo = (id) => {
-    const updatedTodos = todos.filter((todo) => todo.id !== id);
-    setTodos(updatedTodos);
+    setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   const toggleComplete = (id) => {
-    const updatedTodos = todos.map((todo) =>
-      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
     );
-    setTodos(updatedTodos);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <header className="text-3xl font-bold mb-8">Add Todo</header>
-      <main className="bg-white p-4 rounded shadow w-full max-w-md">
-        <TodoForm onAddTodo={addTodo} />
-        <div className="todo-list">
-          {todos.map((todo) => (
-            <Todo
-              key={todo.id}
-              todo={todo}
-              onDelete={deleteTodo}
-              onComplete={toggleComplete}
-            />
-          ))}
+    <div className="min-h-screen bg-slate-900  justify-center items-center flex flex-col">
+      <div className="flex flex-col max-w-md w-full">
+        <h1 className="text-4xl font-bold mb-4 text-center text-white">
+          Todo App
+        </h1>
+        <TodoForm
+          addTodo={addTodo}
+          updateTodo={updateTodo}
+          editTodo={editTodo}
+        />
+        <div className="bg-slate-800 rounded-l">
+          <ul className="list-disc pl-5">
+            {todos.map((todo) => (
+              <Todo
+                key={todo.id}
+                todo={todo}
+                toggleComplete={toggleComplete}
+                deleteTodo={deleteTodo}
+                setEditTodo={setEditTodo}
+              />
+            ))}
+          </ul>
         </div>
-      </main>
+      </div>
     </div>
   );
-};
+}
 
 export default App;
