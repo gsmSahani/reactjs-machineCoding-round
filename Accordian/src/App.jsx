@@ -6,8 +6,8 @@ const App = () => {
   return (
     <>
       <div>
-        {/* <Accordian /> */}
-        <SingleSelectionAccordian />
+        <Accordian />
+        {/* <SingleSelectionAccordian /> */}
       </div>
     </>
   );
