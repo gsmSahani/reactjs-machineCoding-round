@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TodoForm from "./Component/TodoForm";
-import TodoItem from "./Component/TodoItem"; 
+import TodoItem from "./Component/TodoItem";
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -45,10 +45,10 @@ const App = () => {
         {todos.map((todo) => (
           <TodoItem
             key={todo.id}
-            todo={todo} 
+            todo={todo}
             toggleComplete={toggleComplete}
             deleteTodo={deleteTodo}
-            setEditTodo={setEditTodo} 
+            setEditTodo={setEditTodo}
           />
         ))}
       </ul>
