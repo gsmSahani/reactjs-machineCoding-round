@@ -1,11 +1,11 @@
 import React from "react";
-import Stars from "./Components/Star";
+import ImageSlider from "./Components/ImageSlider/ImageSlider";
 
 const App = () => {
   return (
     <>
       <div>
-        <Stars noOfStars={5} />
+        <ImageSlider />
       </div>
     </>
   );
