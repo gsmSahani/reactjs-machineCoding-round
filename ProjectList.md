@@ -2,29 +2,54 @@
 
 ### Table of Contents
 
-1. 📜 **Accordion**
-2. 🎨 **Random Color Generator**
-3. 🌐 **Navigation Bar**
-4. 🌗 **Light Mode and Dark Mode**
-5. 📝 **Todo App**
-6. 🎠 **Carousel**
-7. 🖼️ **Image Slider**
-8. 📄 **Pagination**
-9. ❓ **Quiz Application**
-10. ✖️⭕ **Tic Tac Toe**
-11. 📊 **Scroll Indicator**
-12. 🔢 **Counter**
-13. ⏳ **Countdown App**
-14. 🔐 **Login and Registration Form with Validation**
-15. 🌍 **Multi-Page Application with React Router DOM**
-16. 👤 **User Profile Management System with Redux Toolkit**
-17. 🪟 **Modal Popup**
-18. 🔍 **Autocomplete**
-19. 🔎 **Search**
-20. 🔄 **Infinite Scrolling**
-21. 💬 **Random Quote Generator**
+### **Easy**
 
----
+1. **🔢 Counter**
+2. **📄 Pagination**
+3. **🌗 Light Mode and Dark Mode**
+4. **📜 Accordion**
+5. **📝 Todo App**
+6. **🌐 Navigation Bar**
+7. **🎨 Random Color Generator**
+8. **🔍 Autocomplete**
+9. **🔎 Search**
+10. **📊 Scroll Indicator**
+11. **⭐ Star Rating**
+12. **💬 Random Quote Generator**
+13. **🔽 Dropdown Component**
+14. **🔑 Password Generator**
+
+### **Medium**
+
+1. **🎠 Carousel**
+2. **🖼️ Image Slider**
+3. **❓ Quiz Application**
+4. **⏳ Countdown App**
+5. **🪟 Modal Popup**
+6. **📐 Responsive Layout**
+7. **🔄 Infinite Scrolling**
+8. **🌍 Multi-Page Application with React Router DOM**
+9. **✖️⭕ Tic Tac Toe**
+10. **💬 Nested Comments**
+11. **📦 Pop-Over**
+12. **🔐 Login and Registration Form with Validation**
+13. **🌟 Weather App**
+14. **🎲 Snake and Ladder Board**
+15. **📈 Progress Bar**
+16. **👍 Like Button**
+
+### **Hard**
+
+1. **👤 User Profile Management System with Redux Toolkit**
+2. **🧮 Calculator**
+3. **🔧 Custom Hook**
+4. **📋 Job Board**
+5. **📦 Drag and Drop Items**
+6. **🪟 Modal Component**
+7. **💡 Grid Lights**
+8. **🔧 Custom Hook**
+9. **🎠 Carousel** (if implementing advanced features like auto-play, dynamic content)
+
 ### 1. Accordion
 
 - **Single-Selection Accordion:** Create an accordion component where only one section can be expanded at a time. Each section should have a toggle mechanism that collapses any previously expanded section when a new section is opened.
