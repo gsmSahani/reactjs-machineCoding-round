@@ -39,7 +39,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-pink-600 flex justify-center items-center flex-col">
+    <div className="min-h-screen bg-slate-900 flex justify-center items-center flex-col">
       <TodoForm addTodo={addTodo} updateTodo={updateTodo} editTodo={editTodo} />
       <ul>
         {todos.map((todo) => (
